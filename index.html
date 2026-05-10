@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dear Aai | Mother's Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,400;1,700&family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-rose: #a94442;
+            --soft-gold: #c5a059;
+            --bg-cream: #fffdf9;
+            --text-gray: #4a4a4a;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-cream);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-gray);
+            overflow-x: hidden;
+        }
+
+        /* --- Elegant Entrance Overlay --- */
+        #entrance {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 1.5s ease-in-out;
+        }
+
+        .entrance-content h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--primary-rose);
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .open-btn {
+            padding: 12px 35px;
+            font-family: 'Playfair Display', serif;
+            background: none;
+            border: 1px solid var(--soft-gold);
+            color: var(--soft-gold);
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            border-radius: 2px;
+        }
+
+        .open-btn:hover {
+            background: var(--soft-gold);
+            color: white;
+        }
+
+        /* --- Main Layout --- */
+        .wrapper {
+            opacity: 0;
+            transition: 2s;
+            padding-bottom: 100px;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* --- Header Section --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(252,228,236,0.3) 100%);
+        }
+
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3rem, 10vw, 5rem);
+            color: var(--primary-rose);
+            margin: 0;
+        }
+
+        .sub-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--soft-gold);
+        }
+
+        /* --- Hero Image (3D Tilt Effect) --- */
+        .hero-card {
+            position: relative;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 700px;
+            perspective: 1000px;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            transition: transform 0.1s;
+            border: 10px solid white;
+        }
+
+        /* --- Quote Elements --- */
+        .quote-section {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #333;
+            background: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+        }
+
+        .quote-section span {
+            color: var(--primary-rose);
+            font-weight: bold;
+        }
+
+        /* --- Decorative Petals --- */
+        .petal {
+            position: fixed;
+            top: -10%;
+            background: rgba(255, 192, 203, 0.6);
+            border-radius: 150% 0 150% 0;
+            pointer-events: none;
+            z-index: 999;
+            animation: drift linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* --- Footer Message --- */
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 50px;
+        }
+
+        .final-line {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            color: var(--primary-rose);
+        }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+    </style>
+</head>
+<body>
+
+    <div id="entrance">
+        <div class="entrance-content">
+            <h2>A special message for Aai...</h2>
+            <button class="open-btn" onclick="revealSite()">OPEN WITH LOVE</button>
+        </div>
+    </div>
+
+    <div class="wrapper" id="content">
+        
+        <header>
+            <p class="sub-text">"Grateful for you"</p>
+            <h1 class="main-title">Happy Mother's Day</h1>
+            
+            <div class="hero-card" id="tilt-card">
+                <img src="WhatsApp Image 2026-05-10 at 8.57.58 AM.jpg" alt="Aai and Shanmukh" class="hero-image">
+            </div>
+            
+            <p class="sub-text">May 10, 2026</p>
+        </header>
+
+        <section class="quote-section">
+            <p>"To the world you are a mother, <br>but to our family <span>you are the world.</span>"</p>
+        </section>
+
+        <section>
+            <div style="width: 50px; height: 2px; background: var(--soft-gold); margin: 20px auto;"></div>
+            <p style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.8rem;">A message of gratitude</p>
+            <p style="max-width: 600px; margin: auto; font-style: italic;">
+                "Thank you for your endless patience, your warm smiles, and for being the heart of our home. Every day feels like a blessing because of you."
+            </p>
+        </section>
+
+        <footer>
+            <p class="final-line">Happy Mother's Day Aai, from Shanmukh</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function revealSite() {
+            document.getElementById('entrance').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('entrance').style.display = 'none';
+                document.getElementById('content').style.opacity = '1';
+                startPetals();
+            }, 1500);
+        }
+
+        // 3D Tilt Effect for the photo
+        const card = document.getElementById('tilt-card');
+        document.addEventListener('mousemove', (e) => {
+            let x = (window.innerWidth / 2 - e.pageX) / 25;
+            let y = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+
+        // Falling Petals System
+        function startPetals() {
+            setInterval(() => {
+                const petal = document.createElement('div');
+                petal.className = 'petal';
+                const size = Math.random() * 15 + 10;
+                petal.style.width = size + 'px';
+                petal.style.height = size + 'px';
+                petal.style.left = Math.random() * 100 + 'vw';
+                petal.style.animationDuration = Math.random() * 3 + 4 + 's';
+                document.body.appendChild(petal);
+                
+                setTimeout(() => petal.remove(), 6000);
+            }, 400);
+        }
+    </script>
+</body>
+</html>
